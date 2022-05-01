@@ -6,28 +6,28 @@
  */
 
 package agencia.miahuas.pojo;
-	
+
 public class Destino {
 
 	private long idlugar;
 	private String nombre;
 	private String direccion;
 	private String telefono;
-	
+
 	public Destino() {
-		
+
 	}
-	
-	//craemos el constructor Destino
-	public Destino(long idlugar,String  nombre, String direccion ,String telefono) {
-		
-		this.idlugar= idlugar;
-		this.nombre= nombre;
-		this.direccion= direccion;
-		this.telefono= telefono;
-		
+
+	// craemos el constructor Destino
+	public Destino(long idlugar, String nombre, String direccion, String telefono) {
+
+		this.idlugar = idlugar;
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.telefono = telefono;
+
 	}
-	
+
 	public long getIdlugar() {
 		return idlugar;
 	}
@@ -60,8 +60,4 @@ public class Destino {
 		this.telefono = telefono;
 	}
 
-	
-	
-	
-	}
-
+}

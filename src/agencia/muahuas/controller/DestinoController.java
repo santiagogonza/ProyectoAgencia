@@ -10,33 +10,23 @@ import java.util.List;
 
 // hacemos la llamada a las demas paquetes como el model, pojo.
 
-import agencia.miahuas.model.DestinoModel;
+import agencia.miahuas.model.DestinoModel;	
 import agencia.miahuas.pojo.Destino;
 
 public class DestinoController {
-	
+
 	private DestinoModel model = new DestinoModel();
-	
-	// nuevo objeto de viaje
-	//private Viaje viaje= new Viaje();	
-	
-	
-	public List<Destino>  crearDestino(List<Destino> lista, Destino destino){
+
+	public List<Destino> crearDestino(List<Destino> lista, Destino destino) {
 		return model.crearDestino(lista, destino);
 	}
-	public List<Destino>  eliminarDestino(List<Destino> lista, long idlugar){
+
+	public List<Destino> eliminarDestino(List<Destino> lista, long idlugar) {
 		return model.eliminarDestino(lista, idlugar);
 	}
+
 	public void mostrarDestino(List<Destino> lista) {
 		model.mostrarDestino(lista);
-		}
-	
-	
-	
-	
+	}
+
 }
-
-
-
-
-

@@ -43,11 +43,11 @@ public class Principal {
 		// se crea el objeto de viaje
 
 		Viaje viaje1 = new Viaje();
-
+		Viaje viaje2 = new Viaje();
 //menú de opciones 
-		System.out.println("1.- lista de lugares: ");
-		System.out.println("2.- lista de transporte: ");
-		System.out.println("3.- lsita de viajes: ");
+		System.out.println("1.- Lista de lugares: ");
+		System.out.println("2.- Lista de transporte: ");
+		System.out.println("3.- Lista de viajes: ");
 
 		int opc = sc.nextInt();
 
@@ -99,13 +99,20 @@ public class Principal {
 
 			System.out.println("Listas de Viajes");
 
-			viaje1.setCodigo(8);
-			// viaje1.setDestino("monjas");
-			// viaje1.setSalida("a las 9");
-			// viaje1.setPrecio(75);
+			viaje1.setCodigo(1);
+			viaje1.setDestino("monjas");
+			viaje1.setSalida("a las 9");
+			viaje1.setRegreso("Cada hora");
+			viaje1.setPrecio(75);
+			
+			viaje2.setCodigo(2);
+			viaje2.setDestino("Tamazulapan");
+			viaje2.setSalida("a las 5:am");
+			viaje2.setRegreso("Cada 25 minutos");
+			viaje2.setPrecio(50);
 
 			control.crearViaje(lis, viaje1);
-
+			control.crearViaje(lis, viaje2);
 			break;
 
 		}

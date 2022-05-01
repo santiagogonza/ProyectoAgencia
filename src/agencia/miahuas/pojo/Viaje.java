@@ -70,16 +70,6 @@ public class Viaje {
 		this.precio = precio;
 	}
 
-	/*
-	public List<Viaje> crearViaje(List<Viaje> lis, Viaje viaje) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
-	public void mostrarViaje(List<Viaje> lis) {
-		// TODO Auto-generated method stub
-		
-	}
-*/
 	
-}
+}	

@@ -26,7 +26,7 @@ public class DestinoModel {
 
 	public void mostrarDestino(List<Destino> lista) {
 		for(Destino destino: lista) {
-			System.out.println("Id: "+destino.getIdlugar());
+			System.out.println("\nId: "+destino.getIdlugar());
 			System.out.println("Destino: "+ destino.getNombre());
 			System.out.println("Dirección: "+destino.getDireccion());
 			System.out.println("Télefono es: "+destino.getTelefono());
