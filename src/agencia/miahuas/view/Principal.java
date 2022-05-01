@@ -99,6 +99,7 @@ public class Principal {
 			controller.crearDestino(lista, destino6);
 			break;
 		case 2:
+			System.out.println("******************************");
 			System.out.println("Lista de transpotes");
 
 		case 3:
