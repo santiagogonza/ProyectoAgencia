@@ -56,34 +56,40 @@ public class Principal {
 			System.out.println("la lista de los lugasres son: ");
 
 			destino1.setIdlugar(1);
-			destino1.setNombre("zitlá");
+			destino1.setNombre("Santa Cruz Xitla");
+			destino1.setCodigoPost(70823);
 			destino1.setDireccion("16 de septiembre");
-			destino1.setTelefono("9512364425");
+			destino1.setTelefono("+52 951 512 0300");
 
 			destino2.setIdlugar(2);
-			destino2.setNombre(".....");
+			destino2.setNombre("San Ildefonso Amatlán");
+			destino2.setCodigoPost(70828);
 			destino2.setDireccion("16 de septiembre");
-			destino2.setTelefono("9511882085");
+			destino2.setTelefono("+52 957 572 0438");
 
 			destino3.setIdlugar(3);
 			destino3.setNombre("Monjas");
+			destino3.setCodigoPost(70826);
 			destino3.setDireccion("la Z");
-			destino3.setTelefono("9511234587");
+			destino3.setTelefono("+52 951 105 3048");
 
 			destino4.setIdlugar(4);
-			destino4.setNombre("Tamazulapa");
+			destino4.setNombre("Santo Tomás Tamazulapan");
+			destino4.setCodigoPost(70866);
 			destino4.setDireccion("3 de octubre");
-			destino4.setTelefono("9515548655");
+			destino4.setTelefono("+52 951 510 5089");
 
 			destino5.setIdlugar(5);
-			destino5.setNombre("Santa Cruz Cuixtlá");
+			destino5.setNombre("Santa Catarina Cuixtla");
+			destino5.setCodigoPost(70830);
 			destino5.setDireccion("15 de septiembre");
-			destino5.setTelefono("9515548655");
+			destino5.setTelefono("+52 951 533 0052");
 
 			destino6.setIdlugar(6);
-			destino6.setNombre("San Jose del Pácifico");
+			destino6.setNombre("San Andrés Paxtlán");
+			destino6.setCodigoPost(70868);
 			destino6.setDireccion("Ubicado en la sierra sur");
-			destino6.setTelefono("9515548655");
+			destino6.setTelefono("+52 951 488 3200");
 
 			controller.crearDestino(lista, destino1);
 			controller.crearDestino(lista, destino2);

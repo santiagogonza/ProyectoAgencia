@@ -19,7 +19,7 @@ public class ViajeModel {
 	}
 
 	public void mostrarViaje(List<Viaje> lis) {
-		for (Viaje viaje: lis) {
+		for (Viaje viaje : lis) {
 			System.out.println("***************************************************");
 			System.out.println("\nId_código: " + viaje.getCodigo());
 			System.out.println("Destino: " + viaje.getDestino());

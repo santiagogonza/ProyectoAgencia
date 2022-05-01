@@ -1,5 +1,5 @@
 /*
- * @Autor:Gonzalo Santiago García						   
+ * @Autor:Gonzalo Santiago García					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	   
  Fecha_de_Inicio: 25 de abril del 2022				   
  Fecha_de_actualización: 25 de abril del 2022				   
  Descripción: se presentan la función main 
@@ -13,19 +13,29 @@ public class Destino {
 	private String nombre;
 	private String direccion;
 	private String telefono;
-
+	private int codigoPost;
 	public Destino() {
 
 	}
 
 	// craemos el constructor Destino
-	public Destino(long idlugar, String nombre, String direccion, String telefono) {
+	public Destino(long idlugar, String nombre, String direccion, String telefono, int codigoPost) {
 
 		this.idlugar = idlugar;
 		this.nombre = nombre;
 		this.direccion = direccion;
 		this.telefono = telefono;
+		this.codigoPost = codigoPost;
+	}
+	
+	
+	
+	public int getCodigoPost() {
+		return codigoPost;
+	}
 
+	public void setCodigoPost(int codigoPost) {
+		this.codigoPost = codigoPost;
 	}
 
 	public long getIdlugar() {

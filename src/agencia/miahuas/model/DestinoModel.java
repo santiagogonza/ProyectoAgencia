@@ -8,30 +8,33 @@ package agencia.miahuas.model;
 
 import java.util.List;
 import agencia.miahuas.pojo.Destino;
+
 public class DestinoModel {
-	
-	
-	public List<Destino> crearDestino(List<Destino> lista, Destino destino){
+
+	public List<Destino> crearDestino(List<Destino> lista, Destino destino) {
 		lista.add(destino);
 		return lista;
-		
+
 	}
-	public List <Destino> eliminarDestino(List<Destino> lista, long idlugar){
+
+	public List<Destino> eliminarDestino(List<Destino> lista, long idlugar) {
 		Destino destino = new Destino();
 		destino = lista.get((int) idlugar);
 		lista.remove(destino);
 		return lista;
-		
+
 	}
 
 	public void mostrarDestino(List<Destino> lista) {
-		for(Destino destino: lista) {
-			System.out.println("\nId: "+destino.getIdlugar());
-			System.out.println("Destino: "+ destino.getNombre());
-			System.out.println("Dirección: "+destino.getDireccion());
-			System.out.println("Télefono es: "+destino.getTelefono());
+		for (Destino destino : lista) {
+			System.out.println("*********************************************");
+			System.out.println("\nId: " + destino.getIdlugar());
+			System.out.println("Destino: " + destino.getNombre());
+			System.out.println("Código Postal:"+ destino.getCodigoPost());
+			System.out.println("Dirección: " + destino.getDireccion());
+			System.out.println("Télefono: " + destino.getTelefono());
+			System.out.println("*********************************************");
 		}
 	}
-		
-}	
- 	
+
+}

@@ -10,7 +10,7 @@ import java.util.List;
 
 // hacemos la llamada a las demas paquetes como el model, pojo.
 
-import agencia.miahuas.model.DestinoModel;	
+import agencia.miahuas.model.DestinoModel;
 import agencia.miahuas.pojo.Destino;
 
 public class DestinoController {
