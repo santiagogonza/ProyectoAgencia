@@ -16,6 +16,15 @@ public class DestinoModel {
 		return lista;
 
 	}
+	
+	public Destino obtenerUnDestino(List<Destino> lista, String nombre) {
+		for (Destino destino : lista) {
+			if(destino.getNombre().compareTo(nombre)==0) {
+				return destino;
+			}
+		}
+		return null;
+	}
 
 	public List<Destino> eliminarDestino(List<Destino> lista, long idlugar) {
 		Destino destino = new Destino();
@@ -26,15 +35,19 @@ public class DestinoModel {
 	}
 
 	public void mostrarDestino(List<Destino> lista) {
-		for (Destino destino : lista) {
-			System.out.println("*********************************************");
-			System.out.println("\nId: " + destino.getIdlugar());
-			System.out.println("Destino: " + destino.getNombre());
-			System.out.println("Código Postal:"+ destino.getCodigoPost());
-			System.out.println("Dirección: " + destino.getDireccion());
-			System.out.println("Télefono: " + destino.getTelefono());
-			System.out.println("*********************************************");
-		}
+		System.out.println("-----------------------------------------------------------------------------------------------------------------------------");
+		System.out.println("|   Id     |   Destino      	       | Código Postal      |                  Dirección               |    Télefono        |");
+		System.out.println("-----------------------------------------------------------------------------------------------------------------------------");
+		for (Destino destino : lista) { 
+		System.out.println("|   "+destino.getIdlugar() +"      |   "+ destino.getNombre() +"\t  | "       + destino.getCodigoPost() +"\t       | " + destino.getDireccion() +"    \t|" + destino.getTelefono()+"    |");
+		System.out.println("-----------------------------------------------------------------------------------------------------------------------------");	
+			
+			
+			
+			
+			
+		}	
+		
 	}
 
 }

@@ -11,23 +11,28 @@ import java.util.List;
 
 import java.util.Scanner;
 import agencia.miahuas.pojo.Destino;
-
+import agencia.miahuas.pojo.Guia;
 import agencia.miahuas.pojo.Viaje;
+import agencia.miahuas.pojo.Transporte;
 import agencia.muahuas.controller.DestinoController;
 import agencia.muahuas.controller.ViajeController;
+import agencia.muahuas.controller.TransporteController;
 
 public class Principal {
 
 	// se crea la lista de Destino
-	private static DestinoController controller = new DestinoController();
-	private static List<Destino> lista = new ArrayList<>();
-
-	// viaje
-	private static ViajeController control = new ViajeController();
-	private static List<Viaje> lis = new ArrayList<>();
+	private static DestinoController controlDest = new DestinoController();
+	private static List<Destino> listaDest = new ArrayList<>();
 
 	// se crea la lista de viaje
+	private static ViajeController controlViaj = new ViajeController();
+	private static List<Viaje> listaViaj = new ArrayList<>();
 
+	// se crea el arreglo de Transporte
+	private static TransporteController controlTransp = new TransporteController();
+	private static List<Transporte> listaTransp = new ArrayList<>();
+
+	// Scanner lee un dato por el teclado
 	private static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -44,16 +49,31 @@ public class Principal {
 
 		Viaje viaje1 = new Viaje();
 		Viaje viaje2 = new Viaje();
-//menú de opciones 
-		System.out.println("1.- Lista de lugares: ");
-		System.out.println("2.- Lista de transporte: ");
-		System.out.println("3.- Lista de viajes: ");
+		
+		
+		Guia guia1 = new Guia();
 
+		// se crea el nuevo objeto de Transporte
+
+		Transporte transport1 = new Transporte();
+		Transporte transport2 = new Transporte();
+		Transporte transport3 = new Transporte();
+
+		// menú de opciones
+		System.out.println("----------------------------------");
+		System.out.println("| AGENCIA DE VIAJES MIAHUATLÁN \n|");
+		System.out.println("|  1.- Lista de lugares:         |");
+		System.out.println("|  2.- Lista de viajes:          |");
+		System.out.println("|  3.- Lista de transporte:      |");
+		System.out.println("|  4.- Salir                     |");
+		System.out.println("---------------------------------");
+
+		System.out.println("\n");
 		int opc = sc.nextInt();
 
 		switch (opc) {
 		case 1:
-			System.out.println("la lista de los lugasres son: ");
+			System.out.println("\tla lista de los lugasres son: ");
 
 			destino1.setIdlugar(1);
 			destino1.setNombre("Santa Cruz Xitla");
@@ -91,41 +111,73 @@ public class Principal {
 			destino6.setDireccion("Ubicado en la sierra sur");
 			destino6.setTelefono("+52 951 488 3200");
 
-			controller.crearDestino(lista, destino1);
-			controller.crearDestino(lista, destino2);
-			controller.crearDestino(lista, destino3);
-			controller.crearDestino(lista, destino4);
-			controller.crearDestino(lista, destino5);
-			controller.crearDestino(lista, destino6);
+			controlDest .crearDestino(listaDest, destino1);
+			controlDest .crearDestino(listaDest, destino2);
+			controlDest .crearDestino(listaDest, destino3);
+			controlDest.crearDestino(listaDest, destino4);
+			controlDest.crearDestino(listaDest, destino5);
+			controlDest.crearDestino(listaDest, destino6);
+
+			controlDest.mostrarDestino(listaDest);
+
 			break;
 		case 2:
-			System.out.println("******************************");
-			System.out.println("Lista de transpotes");
-
-		case 3:
 
 			System.out.println("Listas de Viajes");
 
 			viaje1.setCodigo(1);
-			viaje1.setDestino("monjas");
-			viaje1.setSalida("a las 9");
-			viaje1.setRegreso("Cada hora");
+			Scanner pedirDestino = new Scanner(System.in);
+			viaje1.setDestino(controlDest.obtenerUnDestino(listaDest, pedirDestino.nextLine()));
+			// llamamos a la clases guia de tipo guia
+			//viaje1.setGuia("nombre");
+			//viaje1.getGuia(IdUsuario);
+			
+			
+			//viaje1.setRegreso("Cada hora");
 			viaje1.setPrecio(75);
+
 			
 			viaje2.setCodigo(2);
-			viaje2.setDestino("Tamazulapan");
-			viaje2.setSalida("a las 5:am");
-			viaje2.setRegreso("Cada 25 minutos");
+			//viaje2.setDestino("Santo Tomas Tamazulapan");
+			//viaje2.setSalida("a las 5:am");
+			//viaje2.setRegreso("Cada 15 minutos");
 			viaje2.setPrecio(50);
 
-			control.crearViaje(lis, viaje1);
-			control.crearViaje(lis, viaje2);
+			controlViaj.crearViaje(listaViaj , viaje1);
+			controlViaj.crearViaje(listaViaj , viaje2);
+
+			controlViaj.mostrarViaje(listaViaj );
+			break;
+
+		case 3:
+
+			System.out.println("\n\tLista de transpotes");
+
+			transport1.setIdTranspor(1);
+			transport1.setNombreTransport("Taxi");
+			transport1.setNumAsiento(5);
+
+			transport2.setIdTranspor(2);
+			transport2.setNombreTransport("Micro Buss");
+			transport2.setNumAsiento(20);
+
+			transport3.setIdTranspor(3);
+			transport3.setNombreTransport("Motocicletas");
+			transport3.setNumAsiento(2);
+
+			controlTransp.crearTransporte(listaTransp, transport1);
+			controlTransp.crearTransporte(listaTransp, transport2);
+			controlTransp.crearTransporte(listaTransp, transport3);
+
+			// mustra la lista transporte
+			controlTransp.mostrarTransporte(listaTransp);
+
+			break;
+		case 4:
+			System.out.println("\t*************Fin del programa**************");
 			break;
 
 		}
-
-		controller.mostrarDestino(lista);
-		control.mostrarViaje(lis);
 
 	}
 

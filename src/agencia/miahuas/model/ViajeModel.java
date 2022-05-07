@@ -13,20 +13,18 @@ import agencia.miahuas.pojo.Viaje;
 public class ViajeModel {
 
 	// lista de viaje
-	public List<Viaje> crearViaje(List<Viaje> lis, Viaje viaje) {
-		lis.add(viaje);
-		return lis;
+	public List<Viaje> crearViaje(List<Viaje> lista1, Viaje viaje) {
+		lista1.add(viaje);
+		return lista1;
 	}
 
-	public void mostrarViaje(List<Viaje> lis) {
-		for (Viaje viaje : lis) {
-			System.out.println("***************************************************");
-			System.out.println("\nId_código: " + viaje.getCodigo());
-			System.out.println("Destino: " + viaje.getDestino());
-			System.out.println("La salida es:" + viaje.getSalida());
-			System.out.println("El regreso es:" + viaje.getRegreso());
-			System.out.println("El precio es:" + viaje.getPrecio());
-			System.out.println("****************************************************");
+	public void mostrarViaje(List<Viaje> lista1) {
+		System.out.println("--------------------------------------------------------------------------------------");
+		System.out.println("|  Idcódigo  |              Destino      | Hora de salida | Hora de regreso |  Precio  |");
+		System.out.println("--------------------------------------------------------------------------------------");
+		for (Viaje viaje : lista1) {
+		System.out.println("|          "+viaje.getCodigo() +" |      " + viaje.getDestino() +" |            " + viaje.getGuia() +"| " + viaje.getTransporte() +"| " + viaje.getPrecio());
+		System.out.println("----------------------------------------------------------------------------------------");
 		}
 
 	}

@@ -9,7 +9,7 @@
 
 package agencia.miahuas.pojo;
 
-public class usuario {
+public class Guia {
 	private String nombre;
 	private long idUsuario;
 	private String fecha;

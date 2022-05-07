@@ -7,27 +7,19 @@
  */
 package agencia.miahuas.pojo;
 
-//import java.util.List;
-
 public class Viaje {
 
 	private long codigo;
-	private String destino;
-	private String salida;
-	private String regreso;
+	private Destino destino;
+	
+	private Guia guia;
+	private Transporte transporte;
+	
 	private int precio;
 
 //se crea el constructor vacio
 	public Viaje() {
 
-	}
-
-	public Viaje(long codigo, String destino, String salida, String regreso, int precio) {
-		this.codigo = codigo;
-		this.destino = destino;
-		this.salida = salida;
-		this.regreso = regreso;
-		this.precio = precio;
 	}
 
 	public long getCodigo() {
@@ -38,28 +30,28 @@ public class Viaje {
 		this.codigo = codigo;
 	}
 
-	public String getDestino() {
+	public Destino getDestino() {
 		return destino;
 	}
 
-	public void setDestino(String destino) {
+	public void setDestino(Destino destino) {
 		this.destino = destino;
 	}
 
-	public String getSalida() {
-		return salida;
+	public Guia getGuia() {
+		return guia;
 	}
 
-	public void setSalida(String salida) {
-		this.salida = salida;
+	public void setGuia(Guia guia) {
+		this.guia = guia;
 	}
 
-	public String getRegreso() {
-		return regreso;
+	public Transporte getTransporte() {
+		return transporte;
 	}
 
-	public void setRegreso(String regreso) {
-		this.regreso = regreso;
+	public void setTransporte(Transporte transporte) {
+		this.transporte = transporte;
 	}
 
 	public int getPrecio() {
@@ -70,6 +62,8 @@ public class Viaje {
 		this.precio = precio;
 	}
 
+	
+	
 
 	
 }	
