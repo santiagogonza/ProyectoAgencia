@@ -207,11 +207,18 @@ public class Principal {
 			case 4:
 				
 				controlDest.mostrarDestino(listaDest);
-				
+				Destino destino;
+				long id;
 				System.out.println("eliga el Id del destino que desea viajar");
-				long id = leerNumero.nextLong();
-				// objeto destino
-				Destino destino = controlDest.obtenerUnDestino(listaDest, id);
+				do {
+					id = leerNumero.nextLong();
+					destino = controlDest.obtenerUnDestino(listaDest, id);
+					if(destino==null) {
+						System.out.println("No hay registro");
+						System.out.println("ingresa una opcion valida");
+					}
+				}while(destino==null);
+				
 
 				System.out.println("-------------------------------------------------------------------------------------------");
 				System.out.println("|               Destino            |       Ubicación                  |    Télefono       |");
