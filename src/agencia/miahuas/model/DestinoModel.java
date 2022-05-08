@@ -23,7 +23,8 @@ public class DestinoModel {
 				return destino;
 			}
 		}
-		return null;
+		//esta parte que es lo que re torna para que funcione la opcion 2
+		return (Destino) lista;
 	}
 
 	public List<Destino> eliminarDestino(List<Destino> lista, long idlugar) {
@@ -39,7 +40,7 @@ public class DestinoModel {
 		System.out.println("|   Id     |   Destino      	       | Código Postal      |                  Dirección               |    Télefono        |");
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------");
 		for (Destino destino : lista) { 
-		System.out.println("|   "+destino.getIdlugar() +"      |   "+ destino.getNombre() +"\t  | "       + destino.getCodigoPost() +"\t       | " + destino.getDireccion() +"    \t|" + destino.getTelefono()+"    |");
+		System.out.println("|   "+destino.getIdlugar() +"      |   "+ destino.getNombre() +"\t   | "       + destino.getCodigoPost() +"\t       | " + destino.getDireccion() +"    \t|" + destino.getTelefono()+"    |");
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------");	
 			
 			

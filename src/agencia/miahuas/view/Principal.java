@@ -33,7 +33,7 @@ public class Principal {
 	private static List<Transporte> listaTransp = new ArrayList<>();
 
 	// Scanner lee un dato por el teclado
-	private static Scanner sc = new Scanner(System.in);
+	private static Scanner pedirDestino = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
@@ -49,8 +49,7 @@ public class Principal {
 
 		Viaje viaje1 = new Viaje();
 		Viaje viaje2 = new Viaje();
-		
-		
+
 		Guia guia1 = new Guia();
 
 		// se crea el nuevo objeto de Transporte
@@ -69,7 +68,7 @@ public class Principal {
 		System.out.println("---------------------------------");
 
 		System.out.println("\n");
-		int opc = sc.nextInt();
+		int opc = pedirDestino.nextInt();
 
 		switch (opc) {
 		case 1:
@@ -92,7 +91,7 @@ public class Principal {
 			destino3.setCodigoPost(70826);
 			destino3.setDireccion("la Z");
 			destino3.setTelefono("+52 951 105 3048");
-
+			
 			destino4.setIdlugar(4);
 			destino4.setNombre("Santo Tomás Tamazulapan");
 			destino4.setCodigoPost(70866);
@@ -111,9 +110,9 @@ public class Principal {
 			destino6.setDireccion("Ubicado en la sierra sur");
 			destino6.setTelefono("+52 951 488 3200");
 
-			controlDest .crearDestino(listaDest, destino1);
-			controlDest .crearDestino(listaDest, destino2);
-			controlDest .crearDestino(listaDest, destino3);
+			controlDest.crearDestino(listaDest, destino1);
+			controlDest.crearDestino(listaDest, destino2);
+			controlDest.crearDestino(listaDest, destino3);
 			controlDest.crearDestino(listaDest, destino4);
 			controlDest.crearDestino(listaDest, destino5);
 			controlDest.crearDestino(listaDest, destino6);
@@ -126,27 +125,30 @@ public class Principal {
 			System.out.println("Listas de Viajes");
 
 			viaje1.setCodigo(1);
-			Scanner pedirDestino = new Scanner(System.in);
+		//	Scanner pedirDestino = new Scanner(System.in);
 			viaje1.setDestino(controlDest.obtenerUnDestino(listaDest, pedirDestino.nextLine()));
+			
+			
+			
+		
+			
 			// llamamos a la clases guia de tipo guia
-			//viaje1.setGuia("nombre");
-			//viaje1.getGuia(IdUsuario);
-			
-			
-			//viaje1.setRegreso("Cada hora");
+			// viaje1.setGuia("nombre");
+			// viaje1.getGuia(IdUsuario);
+
+			// viaje1.setRegreso("Cada hora");
 			viaje1.setPrecio(75);
 
-			
 			viaje2.setCodigo(2);
-			//viaje2.setDestino("Santo Tomas Tamazulapan");
-			//viaje2.setSalida("a las 5:am");
-			//viaje2.setRegreso("Cada 15 minutos");
+			// viaje2.setDestino("Santo Tomas Tamazulapan");
+			// viaje2.setSalida("a las 5:am");
+			// viaje2.setRegreso("Cada 15 minutos");
 			viaje2.setPrecio(50);
 
-			controlViaj.crearViaje(listaViaj , viaje1);
-			controlViaj.crearViaje(listaViaj , viaje2);
+			controlViaj.crearViaje(listaViaj, viaje1);
+			controlViaj.crearViaje(listaViaj, viaje2);
 
-			controlViaj.mostrarViaje(listaViaj );
+			controlViaj.mostrarViaje(listaViaj);
 			break;
 
 		case 3:
