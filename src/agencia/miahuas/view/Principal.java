@@ -11,7 +11,6 @@ import java.util.List;
 
 import java.util.Scanner;
 import agencia.miahuas.pojo.Destino;
-//import agencia.miahuas.pojo.Guia;
 import agencia.miahuas.pojo.Viaje;
 import agencia.miahuas.pojo.Transporte;
 import agencia.muahuas.controller.DestinoController;
@@ -33,12 +32,12 @@ public class Principal {
 	private static List<Transporte> listaTransp = new ArrayList<>();
 
 	// Scanner lee un dato por el teclado
-	
+
 	private static Scanner leerNumero = new Scanner(System.in);
 	private static Scanner lercadenas = new Scanner(System.in);
-	
-	public static void main(String[] args) {
 
+	public static void main(String[] args) {
+		int opc;
 		// se crea el nuevo objeto de destino
 		Destino destino1 = new Destino();
 		Destino destino2 = new Destino();
@@ -51,14 +50,79 @@ public class Principal {
 
 		Viaje viaje1 = new Viaje();
 		Viaje viaje2 = new Viaje();
-		Viaje viaje3 = new Viaje();
-		
+	
+
 		// se crea el nuevo objeto de Transporte
 
 		Transporte transport1 = new Transporte();
 		Transporte transport2 = new Transporte();
 		Transporte transport3 = new Transporte();
+		
+		
+		
+		destino1.setIdlugar(1);
+		destino1.setNombre("Santa Cruz Xitla");
+		destino1.setCodigoPost(70823);
+		destino1.setDireccion("16 de septiembre");
+		destino1.setTelefono("+52 951 512 0300");
 
+		destino2.setIdlugar(2);
+		destino2.setNombre("San Ildefonso Amatlán");
+		destino2.setCodigoPost(70828);
+		destino2.setDireccion("16 de septiembre");
+		destino2.setTelefono("+52 957 572 0438");
+
+		destino3.setIdlugar(3);
+		destino3.setNombre("Monjas");
+		destino3.setCodigoPost(70826);
+		destino3.setDireccion("la Z");
+		destino3.setTelefono("+52 951 105 3048");
+
+		destino4.setIdlugar(4);
+		destino4.setNombre("Santo Tomás Tamazulapan");
+		destino4.setCodigoPost(70866);
+		destino4.setDireccion("3 de octubre");
+		destino4.setTelefono("+52 951 510 5089");
+
+		destino5.setIdlugar(5);
+		destino5.setNombre("Santa Catarina Cuixtla");
+		destino5.setCodigoPost(70830);
+		destino5.setDireccion("15 de septiembre");
+		destino5.setTelefono("+52 951 533 0052");
+
+		destino6.setIdlugar(6);
+		destino6.setNombre("San Andrés Paxtlán");
+		destino6.setCodigoPost(70868);
+		destino6.setDireccion("Ubicado en la sierra sur");
+		destino6.setTelefono("+52 951 488 3200");
+
+		controlDest.crearDestino(listaDest, destino1);
+		controlDest.crearDestino(listaDest, destino2);
+		controlDest.crearDestino(listaDest, destino3);
+		controlDest.crearDestino(listaDest, destino4);
+		controlDest.crearDestino(listaDest, destino5);
+		controlDest.crearDestino(listaDest, destino6);
+
+		
+		//nasa
+		viaje1.setCodigo(1);
+		viaje1.setDestino("Monjas");
+		viaje1.setSalida("a las 5:am");
+		viaje1.setRegreso("Cada hora");
+		viaje1.setPrecio(75);
+
+		viaje2.setCodigo(2);
+		viaje2.setDestino("Santo Tomas Tamazulapan");
+		viaje2.setSalida("a las 5:am");
+		viaje2.setRegreso("Cada 15 minutos");
+		viaje2.setPrecio(50);
+
+		controlViaj.crearViaje(listaViaj, viaje1);
+		controlViaj.crearViaje(listaViaj, viaje2);
+
+		
+		
+		do {
 		// menú de opciones
 		System.out.println("----------------------------------");
 		System.out.println("| AGENCIA DE VIAJES MIAHUATLÁN \n|");
@@ -69,95 +133,49 @@ public class Principal {
 		System.out.println("---------------------------------");
 
 		System.out.println("\n");
-		int opc = leerNumero.nextInt();
-
+		
+		opc = leerNumero.nextInt();
+		
 		switch (opc) {
 		case 1:
 			System.out.println("\tla lista de los lugasres son: ");
 
-			destino1.setIdlugar(1);
-			destino1.setNombre("Santa Cruz Xitla");
-			destino1.setCodigoPost(70823);
-			destino1.setDireccion("16 de septiembre");
-			destino1.setTelefono("+52 951 512 0300");
-
-			destino2.setIdlugar(2);
-			destino2.setNombre("San Ildefonso Amatlán");
-			destino2.setCodigoPost(70828);
-			destino2.setDireccion("16 de septiembre");
-			destino2.setTelefono("+52 957 572 0438");
-
-			destino3.setIdlugar(3);
-			destino3.setNombre("Monjas");
-			destino3.setCodigoPost(70826);
-			destino3.setDireccion("la Z");
-			destino3.setTelefono("+52 951 105 3048");
-
-			destino4.setIdlugar(4);
-			destino4.setNombre("Santo Tomás Tamazulapan");
-			destino4.setCodigoPost(70866);
-			destino4.setDireccion("3 de octubre");
-			destino4.setTelefono("+52 951 510 5089");
-
-			destino5.setIdlugar(5);
-			destino5.setNombre("Santa Catarina Cuixtla");
-			destino5.setCodigoPost(70830);
-			destino5.setDireccion("15 de septiembre");
-			destino5.setTelefono("+52 951 533 0052");
-
-			destino6.setIdlugar(6);
-			destino6.setNombre("San Andrés Paxtlán");
-			destino6.setCodigoPost(70868);
-			destino6.setDireccion("Ubicado en la sierra sur");
-			destino6.setTelefono("+52 951 488 3200");
-
-			controlDest.crearDestino(listaDest, destino1);
-			controlDest.crearDestino(listaDest, destino2);
-			controlDest.crearDestino(listaDest, destino3);
-			controlDest.crearDestino(listaDest, destino4);
-			controlDest.crearDestino(listaDest, destino5);
-			controlDest.crearDestino(listaDest, destino6);
-
+			
 			controlDest.mostrarDestino(listaDest);
 
 			break;
 		case 2:
+			
+			System.out.println("ingrese los datos que desea realizar:");
+			int cantdato = leerNumero.nextInt();
+			for(int i = 0; i<cantdato; i++){
+				
+				Viaje viaje3 = new Viaje();
+				
+				viaje3.setCodigo(listaViaj.size());
+				System.out.println("ingresa el destino que desea realizar");
+				viaje3.setDestino(lercadenas.nextLine());
 
+				System.out.println("ingre la hora de salida");
+				viaje3.setSalida(lercadenas.nextLine());
+				System.out.println("ingrese la hora de regreso");
+				viaje3.setRegreso(lercadenas.nextLine());
+				viaje3.setPrecio(50);
+				
+				
+				
+				controlViaj.crearViaje(listaViaj, viaje3);
+			}
+			
+			
+			
 			System.out.println("Listas de Viajes");
-			
-			viaje1.setCodigo(1);
-			viaje1.setDestino("Monjas");
-			viaje1.setSalida("a las 5:am");
-			viaje1.setRegreso("Cada hora");
-			viaje1.setPrecio(75);
-			
-			viaje2.setCodigo(2);
-			viaje2.setDestino("Santo Tomas Tamazulapan");
-			viaje2.setSalida("a las 5:am");
-			viaje2.setRegreso("Cada 15 minutos");
-			viaje2.setPrecio(50);
-			
-			
-			controlViaj.crearViaje(listaViaj, viaje1);
-			controlViaj.crearViaje(listaViaj, viaje2);
-			
-			
-			
-			viaje3.setCodigo(3);
-			
-			System.out.println("ingresa el destino que desea realizar");
-			viaje3.setDestino(lercadenas.nextLine());
-			
-			System.out.println("ingre la hora de salida");
-			viaje3.setSalida(lercadenas.nextLine());
-			System.out.println("ingrese la hora de regreso");
-			viaje3.setRegreso(lercadenas.nextLine());
-			viaje3.setPrecio(50);
-			
-			controlViaj.crearViaje(listaViaj, viaje3);
-			
+
+		
+
+
 			controlViaj.mostrarViaje(listaViaj);
-			
+
 			break;
 
 		case 3:
@@ -184,21 +202,26 @@ public class Principal {
 			controlTransp.mostrarTransporte(listaTransp);
 
 			break;
-			
+
 		case 4:
 			System.out.println("\t*************Fin del programa**************");
 			break;
-			
-			
+
 		}
 		
-		System.out.println("eliga el Id del destino que desea viajar" );
-		long id=leerNumero.nextLong();
-		//objeto destino
-		Destino destino= controlDest.obtenerUnDestino(listaDest, id) ;
+		}while(opc>= 1 && opc < 4);
+		System.out.println("eliga el Id del destino que desea viajar");
+		long id = leerNumero.nextLong();
+		// objeto destino
+		Destino destino = controlDest.obtenerUnDestino(listaDest, id);
+
+		System.out.println("Nombre :" + destino.getNombre()+"   " + destino.getDireccion()+"   " + destino.getTelefono());
 		
-		System.out.println("Nombre :"+destino.getNombre() +destino.getDireccion() +destino.getTelefono());
+		System.out.println("eliga el Id del Transporte:");
+		 id = leerNumero.nextLong();
+		 Transporte transporte = controlTransp.obtenerTransporte(listaTransp, id);
+		 System.out.println("Id del transporte:  :" + transporte.getIdTranspor()+"   " +transporte.getNombreTransport()+"    " + transporte.getNumAsiento());
 		
 	}
-
+	
 }

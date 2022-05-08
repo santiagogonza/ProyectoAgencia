@@ -9,6 +9,7 @@ package agencia.muahuas.controller;
 
 import java.util.List;
 import agencia.miahuas.model.TransporteModel;
+
 import agencia.miahuas.pojo.Transporte;
 
 public class TransporteController {
@@ -25,6 +26,9 @@ public class TransporteController {
 	
 
 	public Transporte obtenerTransporte(List<Transporte> lista, long id) {
-		return model.obtenerTransporte(lista, id);
+		return transport.obtenerTransporte(lista, id);
 	}
+	
+	
+	
 }

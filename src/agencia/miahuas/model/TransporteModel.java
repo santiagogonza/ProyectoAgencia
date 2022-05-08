@@ -2,7 +2,7 @@ package agencia.miahuas.model;
 
 import java.util.List;
 
-import agencia.miahuas.pojo.Destino;
+//import agencia.miahuas.pojo.Destino;
 import agencia.miahuas.pojo.Transporte;
 
 public class TransporteModel {
