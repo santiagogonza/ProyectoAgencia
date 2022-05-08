@@ -27,7 +27,6 @@ public class TransporteModel {
 		System.out.println("|  Id       |  Nombre de transporte  |  Número de asiento    |");
 		System.out.println("--------------------------------------------------------------");
 		for (Transporte transporte : lista1) {
-			
 			System.out.printf("| %9d | %21s  | %21d |",transporte.getIdTranspor(),transporte.getNombreTransport(), transporte.getNumAsiento() );
 			System.out.println("\n--------------------------------------------------------------");
 		}

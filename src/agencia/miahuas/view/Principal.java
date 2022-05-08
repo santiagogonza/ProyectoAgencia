@@ -140,7 +140,7 @@ public class Principal {
 			System.out.println("|  1.- Lista de lugares:         |");
 			System.out.println("|  2.- Lista de viajes:          |");
 			System.out.println("|  3.- Lista de transporte:      |");
-			System.out.println("|  4.- Reservación:     		 |");
+			System.out.println("|  4.- Reservación:              |");
 			System.out.println("|  5.- Salir                     |");
 			System.out.println("---------------------------------");
 
@@ -205,21 +205,33 @@ public class Principal {
 				break;
 
 			case 4:
+				
+				controlDest.mostrarDestino(listaDest);
+				
 				System.out.println("eliga el Id del destino que desea viajar");
 				long id = leerNumero.nextLong();
 				// objeto destino
 				Destino destino = controlDest.obtenerUnDestino(listaDest, id);
 
-				System.out.println(" Nombre      ");
-				System.out.println(
-						"" + destino.getNombre() + "   " + destino.getDireccion() + "   " + destino.getTelefono());
+				System.out.println("-------------------------------------------------------------------------------------------");
+				System.out.println("|               Destino            |       Ubicación                  |    Télefono       |");
+				System.out.println("-------------------------------------------------------------------------------------------");
+				
+				System.out.printf("| %31s  | %32s | %17s |", destino.getNombre(),destino.getDireccion() , destino.getTelefono() );
+				System.out.println("\n-------------------------------------------------------------------------------------------");		
+				
+				
+//				System.out.println(
+//						"" + destino.getNombre() + "   " + destino.getDireccion() + "   " + destino.getTelefono());
 
 				System.out.println("eliga el Id del Transporte:");
 				id = leerNumero.nextLong();
 				Transporte transporte = controlTransp.obtenerTransporte(listaTransp, id);
 				System.out.println("Id del transporte:  :" + transporte.getIdTranspor() + "   "
 						+ transporte.getNombreTransport() + "    " + transporte.getNumAsiento());
-
+				
+				
+				
 				break;
 			case 5:
 
