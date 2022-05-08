@@ -14,6 +14,7 @@ public class Destino {
 	private String direccion;
 	private String telefono;
 	private int codigoPost;
+	
 	// se crea el contructor vacio de Destino
 	public Destino() {
 

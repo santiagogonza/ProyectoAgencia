@@ -18,12 +18,13 @@ public class ViajeModel {
 		return lista1;
 	}
 
+	
 	public void mostrarViaje(List<Viaje> lista1) {
 		System.out.println("--------------------------------------------------------------------------------------");
 		System.out.println("|  Idcódigo  |              Destino      | Hora de salida | Hora de regreso |  Precio  |");
 		System.out.println("--------------------------------------------------------------------------------------");
 		for (Viaje viaje : lista1) {
-		System.out.println("|          "+viaje.getCodigo() +" |      " + viaje.getDestino() +" |            " + viaje.getGuia() +"| " + viaje.getTransporte() +"| " + viaje.getPrecio());
+		System.out.println("|          "+viaje.getCodigo() +" |      " + viaje.getDestino() +" |            " + viaje.getSalida() +"| " + viaje.getRegreso() +"| " + viaje.getPrecio());
 		System.out.println("----------------------------------------------------------------------------------------");
 		}
 

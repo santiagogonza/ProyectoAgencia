@@ -22,4 +22,9 @@ public class TransporteController {
 	public void mostrarTransporte(List<Transporte> lista2) {
 		transport.mostrarTransporte(lista2);
 	}
+	
+
+	public Transporte obtenerTransporte(List<Transporte> lista, long id) {
+		return model.obtenerTransporte(lista, id);
+	}
 }

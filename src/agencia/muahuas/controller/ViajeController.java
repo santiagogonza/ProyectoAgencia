@@ -8,6 +8,7 @@ package agencia.muahuas.controller;
 
 import java.util.List;
 
+import agencia.miahuas.pojo.Destino;
 import agencia.miahuas.pojo.Viaje;
 import agencia.miahuas.model.ViajeModel;
 
@@ -23,5 +24,6 @@ public class ViajeController {
 	public void mostrarViaje(List<Viaje> lista1) {
 		via.mostrarViaje(lista1);
 	}
+	
 
 }

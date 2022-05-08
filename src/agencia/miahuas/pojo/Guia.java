@@ -10,15 +10,19 @@
 package agencia.miahuas.pojo;
 
 public class Guia {
-	private String nombre;
 	private long idUsuario;
+	private String nombre;
 	private String fecha;
 	
-	public String getNombre() {
-		return nombre;
+	public Guia() {
+		
 	}
-	public void setNombre(String nombre) {
+	
+	public Guia(long idUsuario, String nombre, String fecha) {
+		super();
+		this.idUsuario = idUsuario;
 		this.nombre = nombre;
+		this.fecha = fecha;
 	}
 	public long getIdUsuario() {
 		return idUsuario;
@@ -26,12 +30,21 @@ public class Guia {
 	public void setIdUsuario(long idUsuario) {
 		this.idUsuario = idUsuario;
 	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 	public String getFecha() {
 		return fecha;
 	}
 	public void setFecha(String fecha) {
 		this.fecha = fecha;
 	}
+	
+	
+	
 	
 	
 

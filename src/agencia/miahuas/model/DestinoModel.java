@@ -17,14 +17,14 @@ public class DestinoModel {
 
 	}
 	
-	public Destino obtenerUnDestino(List<Destino> lista, String nombre) {
+	public Destino obtenerUnDestino(List<Destino> lista, long id) {
 		for (Destino destino : lista) {
-			if(destino.getNombre().compareTo(nombre)==0) {
+			
+			if(destino.getIdlugar()==id) {
 				return destino;
 			}
 		}
-		//esta parte que es lo que re torna para que funcione la opcion 2
-		return (Destino) lista;
+		return null;
 	}
 
 	public List<Destino> eliminarDestino(List<Destino> lista, long idlugar) {
