@@ -227,10 +227,6 @@ public class Principal {
 				System.out.printf("| %31s  | %32s | %17s |", destino.getNombre(),destino.getDireccion() , destino.getTelefono() );
 				System.out.println("\n-------------------------------------------------------------------------------------------");		
 				
-				
-//				System.out.println(
-//						"" + destino.getNombre() + "   " + destino.getDireccion() + "   " + destino.getTelefono());
-
 				System.out.println("eliga el Id del Transporte:");
 				id = leerNumero.nextLong();
 				Transporte transporte = controlTransp.obtenerTransporte(listaTransp, id);
