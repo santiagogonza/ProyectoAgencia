@@ -16,11 +16,11 @@ public class DestinoModel {
 		return lista;
 
 	}
-	
+
 	public Destino obtenerUnDestino(List<Destino> lista, long id) {
 		for (Destino destino : lista) {
-			
-			if(destino.getIdlugar()==id) {
+
+			if (destino.getIdlugar() == id) {
 				return destino;
 			}
 		}
@@ -36,19 +36,18 @@ public class DestinoModel {
 	}
 
 	public void mostrarDestino(List<Destino> lista) {
-		System.out.println("-----------------------------------------------------------------------------------------------------------------------------");
-		System.out.println("|   Id     |   Destino      	       | Código Postal      |                  Dirección               |    Télefono        |");
-		System.out.println("-----------------------------------------------------------------------------------------------------------------------------");
-		for (Destino destino : lista) { 
-		System.out.println("|   "+destino.getIdlugar() +"      |   "+ destino.getNombre() +"\t   | "       + destino.getCodigoPost() +"\t       | " + destino.getDireccion() +"    \t|" + destino.getTelefono()+"    |");
-		System.out.println("-----------------------------------------------------------------------------------------------------------------------------");	
-			
-			
-			
-			
-			
-		}	
-		
+		System.out.println("--------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println("|   Id     |   Destino      	           | Código Postal      |                  Dirección               |    Télefono        |");
+		System.out.println(
+				"--------------------------------------------------------------------------------------------------------------------------------");
+		for (Destino destino : lista) {
+			System.out.printf("| %8d | %28s  | %18s | %39s  |%19s |", destino.getIdlugar(), destino.getNombre(),
+					destino.getCodigoPost(), destino.getDireccion(), destino.getTelefono());
+			System.out.println(
+					"\n--------------------------------------------------------------------------------------------------------------------------------");
+
+		}
+
 	}
 
 }

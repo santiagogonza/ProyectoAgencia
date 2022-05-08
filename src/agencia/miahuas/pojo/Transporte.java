@@ -12,38 +12,43 @@ public class Transporte {
 	private long idTranspor;
 	private int numAsiento;
 	private String nombreTransport;
-	
-	public Transporte(){
-		
+
+	public Transporte() {
+
 	}
+
 	public Transporte(long idTranspor, int numAsiento, String nombreTransport) {
 		this.idTranspor = idTranspor;
 		this.numAsiento = numAsiento;
 		this.nombreTransport = nombreTransport;
 	}
-	
+
 	public long getIdTrasnpor() {
 		return idTranspor;
 	}
+
 	public void setIdTranspor(long idTranspor) {
 		this.idTranspor = idTranspor;
 	}
-	
+
 	public int getNumAsiento() {
 		return numAsiento;
 	}
+
 	public void setNumAsiento(int numAsiento) {
 		this.numAsiento = numAsiento;
 	}
+
 	public String getNombreTransport() {
 		return nombreTransport;
 	}
+
 	public void setNombreTransport(String nombreTransport) {
 		this.nombreTransport = nombreTransport;
 	}
+
 	public long getIdTranspor() {
 		return idTranspor;
 	}
-	
-	
-} 
+
+}

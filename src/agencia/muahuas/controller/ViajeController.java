@@ -24,6 +24,5 @@ public class ViajeController {
 	public void mostrarViaje(List<Viaje> lista1) {
 		via.mostrarViaje(lista1);
 	}
-	
 
 }

@@ -14,7 +14,7 @@ public class Destino {
 	private String direccion;
 	private String telefono;
 	private int codigoPost;
-	
+
 	// se crea el contructor vacio de Destino
 	public Destino() {
 
@@ -29,9 +29,7 @@ public class Destino {
 		this.telefono = telefono;
 		this.codigoPost = codigoPost;
 	}
-	
-	
-	
+
 	public int getCodigoPost() {
 		return codigoPost;
 	}

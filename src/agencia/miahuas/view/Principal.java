@@ -34,7 +34,7 @@ public class Principal {
 	// Scanner lee un dato por el teclado
 
 	private static Scanner leerNumero = new Scanner(System.in);
-	private static Scanner lercadenas = new Scanner(System.in);
+	private static Scanner leercadenas = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		int opc;
@@ -50,16 +50,13 @@ public class Principal {
 
 		Viaje viaje1 = new Viaje();
 		Viaje viaje2 = new Viaje();
-	
 
 		// se crea el nuevo objeto de Transporte
 
 		Transporte transport1 = new Transporte();
 		Transporte transport2 = new Transporte();
 		Transporte transport3 = new Transporte();
-		
-		
-		
+
 		destino1.setIdlugar(1);
 		destino1.setNombre("Santa Cruz Xitla");
 		destino1.setCodigoPost(70823);
@@ -103,8 +100,7 @@ public class Principal {
 		controlDest.crearDestino(listaDest, destino5);
 		controlDest.crearDestino(listaDest, destino6);
 
-		
-		//nasa
+		// nasa
 		viaje1.setCodigo(1);
 		viaje1.setDestino("Monjas");
 		viaje1.setSalida("a las 5:am");
@@ -120,108 +116,120 @@ public class Principal {
 		controlViaj.crearViaje(listaViaj, viaje1);
 		controlViaj.crearViaje(listaViaj, viaje2);
 
-		
-		
+		// transporte
+		transport1.setIdTranspor(1);
+		transport1.setNombreTransport("Taxi");
+		transport1.setNumAsiento(5);
+
+		transport2.setIdTranspor(2);
+		transport2.setNombreTransport("Micro Buss");
+		transport2.setNumAsiento(20);
+
+		transport3.setIdTranspor(3);
+		transport3.setNombreTransport("Motocicletas");
+		transport3.setNumAsiento(2);
+
+		controlTransp.crearTransporte(listaTransp, transport1);
+		controlTransp.crearTransporte(listaTransp, transport2);
+		controlTransp.crearTransporte(listaTransp, transport3);
+
 		do {
-		// menú de opciones
-		System.out.println("----------------------------------");
-		System.out.println("| AGENCIA DE VIAJES MIAHUATLÁN \n|");
-		System.out.println("|  1.- Lista de lugares:         |");
-		System.out.println("|  2.- Lista de viajes:          |");
-		System.out.println("|  3.- Lista de transporte:      |");
-		System.out.println("|  4.- Salir                     |");
-		System.out.println("---------------------------------");
+			// menú de opciones
+			System.out.println("----------------------------------");
+			System.out.println("| AGENCIA DE VIAJES MIAHUATLÁN   |");
+			System.out.println("|  1.- Lista de lugares:         |");
+			System.out.println("|  2.- Lista de viajes:          |");
+			System.out.println("|  3.- Lista de transporte:      |");
+			System.out.println("|  4.- Reservación:     		 |");
+			System.out.println("|  5.- Salir                     |");
+			System.out.println("---------------------------------");
 
-		System.out.println("\n");
-		
-		opc = leerNumero.nextInt();
-		
-		switch (opc) {
-		case 1:
-			System.out.println("\tla lista de los lugasres son: ");
+			System.out.println("\n");
+			int candato;
+			opc = leerNumero.nextInt();
 
-			
-			controlDest.mostrarDestino(listaDest);
+			switch (opc) {
+			case 1:
+				System.out.println("\tla lista de los lugasres son: ");
 
-			break;
-		case 2:
-			
-			System.out.println("ingrese los datos que desea realizar:");
-			int cantdato = leerNumero.nextInt();
-			for(int i = 0; i<cantdato; i++){
-				
-				Viaje viaje3 = new Viaje();
-				
-				viaje3.setCodigo(listaViaj.size());
-				System.out.println("ingresa el destino que desea realizar");
-				viaje3.setDestino(lercadenas.nextLine());
+				controlDest.mostrarDestino(listaDest);
 
-				System.out.println("ingre la hora de salida");
-				viaje3.setSalida(lercadenas.nextLine());
-				System.out.println("ingrese la hora de regreso");
-				viaje3.setRegreso(lercadenas.nextLine());
-				viaje3.setPrecio(50);
+				break;
+			case 2:
+
+				System.out.println("ingrese los datos que desea realizar:");
+				candato = leerNumero.nextInt();
+				for (int i = 0; i < candato; i++) {
+
+					Viaje viaje3 = new Viaje();
+
+					viaje3.setCodigo(listaViaj.size() + 1);
+					System.out.println("ingresa el destino que desea realizar");
+					viaje3.setDestino(leercadenas.nextLine());
+
+					System.out.println("ingre la hora de salida");
+					viaje3.setSalida(leercadenas.nextLine());
+					System.out.println("ingrese la hora de regreso");
+					viaje3.setRegreso(leercadenas.nextLine());
+					viaje3.setPrecio(50);
+
+					controlViaj.crearViaje(listaViaj, viaje3);
+				}
+
+				System.out.println("Listas de Viajes");
+
+				controlViaj.mostrarViaje(listaViaj);
+
+				break;
+
+			case 3:
+				System.out.println("ingrese la cantidad de transporte que desea agregar:");
 				
-				
-				
-				controlViaj.crearViaje(listaViaj, viaje3);
+				candato = leerNumero.nextInt();
+				for (int i = 0; i < candato; i++) {
+					Transporte transport4 = new Transporte();
+					transport4.setIdTranspor(listaTransp.size() + 1);
+					System.out.println("ingrese el nombre de transporte que desea viajar: \n");
+					transport4.setNombreTransport(leercadenas.nextLine());
+					System.out.println("ingrese el numero de acientos del transporte para realizar su viaje");
+					transport4.setNumAsiento(leerNumero.nextInt());
+
+					controlTransp.crearTransporte(listaTransp, transport4);
+
+				}
+				System.out.println("\n\tLista de transpotes");
+
+				// mustra la lista transporte
+				controlTransp.mostrarTransporte(listaTransp);
+
+				break;
+
+			case 4:
+				System.out.println("eliga el Id del destino que desea viajar");
+				long id = leerNumero.nextLong();
+				// objeto destino
+				Destino destino = controlDest.obtenerUnDestino(listaDest, id);
+
+				System.out.println(" Nombre      ");
+				System.out.println(
+						"" + destino.getNombre() + "   " + destino.getDireccion() + "   " + destino.getTelefono());
+
+				System.out.println("eliga el Id del Transporte:");
+				id = leerNumero.nextLong();
+				Transporte transporte = controlTransp.obtenerTransporte(listaTransp, id);
+				System.out.println("Id del transporte:  :" + transporte.getIdTranspor() + "   "
+						+ transporte.getNombreTransport() + "    " + transporte.getNumAsiento());
+
+				break;
+			case 5:
+
+				System.out.println("\t*************Fin del programa**************");
+				break;
+
 			}
-			
-			
-			
-			System.out.println("Listas de Viajes");
 
-		
+		} while (opc >= 1 && opc < 5);
 
-
-			controlViaj.mostrarViaje(listaViaj);
-
-			break;
-
-		case 3:
-
-			System.out.println("\n\tLista de transpotes");
-
-			transport1.setIdTranspor(1);
-			transport1.setNombreTransport("Taxi");
-			transport1.setNumAsiento(5);
-
-			transport2.setIdTranspor(2);
-			transport2.setNombreTransport("Micro Buss");
-			transport2.setNumAsiento(20);
-
-			transport3.setIdTranspor(3);
-			transport3.setNombreTransport("Motocicletas");
-			transport3.setNumAsiento(2);
-
-			controlTransp.crearTransporte(listaTransp, transport1);
-			controlTransp.crearTransporte(listaTransp, transport2);
-			controlTransp.crearTransporte(listaTransp, transport3);
-
-			// mustra la lista transporte
-			controlTransp.mostrarTransporte(listaTransp);
-
-			break;
-
-		case 4:
-			System.out.println("\t*************Fin del programa**************");
-			break;
-
-		}
-		
-		}while(opc>= 1 && opc < 4);
-		System.out.println("eliga el Id del destino que desea viajar");
-		long id = leerNumero.nextLong();
-		// objeto destino
-		Destino destino = controlDest.obtenerUnDestino(listaDest, id);
-
-		System.out.println("Nombre :" + destino.getNombre()+"   " + destino.getDireccion()+"   " + destino.getTelefono());
-		
-		System.out.println("eliga el Id del Transporte:");
-		 id = leerNumero.nextLong();
-		 Transporte transporte = controlTransp.obtenerTransporte(listaTransp, id);
-		 System.out.println("Id del transporte:  :" + transporte.getIdTranspor()+"   " +transporte.getNombreTransport()+"    " + transporte.getNumAsiento());
-		
 	}
-	
+
 }

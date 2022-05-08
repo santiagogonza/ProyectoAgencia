@@ -28,7 +28,7 @@ public class DestinoController {
 	public void mostrarDestino(List<Destino> lista) {
 		model.mostrarDestino(lista);
 	}
-	
+
 	public Destino obtenerUnDestino(List<Destino> lista, long id) {
 		return model.obtenerUnDestino(lista, id);
 	}

@@ -14,6 +14,7 @@ public class Viaje {
 	private String salida;
 	private String regreso;
 	private int precio;
+
 //se crea el constructor vacio
 	public Viaje() {
 
@@ -67,5 +68,4 @@ public class Viaje {
 		this.precio = precio;
 	}
 
-	
 }
