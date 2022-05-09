@@ -1,14 +1,14 @@
 /*
  * @Autor:Gonzalo Santiago García						   
  Fecha_de_Inicio: 25 de abril del 2022				   
- Fecha_de_actualización: 25 de abril del 2022				   
- Descripción: se presentan la función main 
+ Fecha_de_actualización: 9 de mayo del 2022				   
+ Descripción: En la fuición main esta función principal del progrma y que 
+ 			  a través ello se puede compilar el programa, 
  */
 package agencia.miahuas.view;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import java.util.Scanner;
 import agencia.miahuas.pojo.Destino;
 import agencia.miahuas.pojo.Viaje;
@@ -228,11 +228,14 @@ public class Principal {
 				System.out.println("\n-------------------------------------------------------------------------------------------");		
 				
 				System.out.println("eliga el Id del Transporte:");
+				
+				
 				id = leerNumero.nextLong();
 				Transporte transporte = controlTransp.obtenerTransporte(listaTransp, id);
-				System.out.println("Id del transporte:  :" + transporte.getIdTranspor() + "   "
-						+ transporte.getNombreTransport() + "    " + transporte.getNumAsiento());
-				
+				System.out.println("--------------------------------------------------------------------");
+				System.out.println("| Id Transporte |  Nombre de Transporte  |   Precio del Transporte |");
+				System.out.printf("| %12d  | %22s | %23s |", transporte.getIdTranspor() ,transporte.getNombreTransport() , transporte.getNumAsiento() );
+				System.out.println("\n--------------------------------------------------------------------");
 				
 				
 				break;
