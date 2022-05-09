@@ -157,14 +157,14 @@ public class Principal {
 				break;
 			case 2:
 
-				System.out.println("ingrese los datos que desea realizar:");
+				System.out.println("ingrese la cantidad de viajes que de desea realizar:");
 				candato = leerNumero.nextInt();
 				for (int i = 0; i < candato; i++) {
 
 					Viaje viaje3 = new Viaje();
 
 					viaje3.setCodigo(listaViaj.size() + 1);
-					System.out.println("ingresa el destino que desea realizar");
+					System.out.println("ingresa el nombre del destino que desea realizar");
 					viaje3.setDestino(leercadenas.nextLine());
 
 					System.out.println("ingre la hora de salida");

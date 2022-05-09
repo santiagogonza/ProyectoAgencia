@@ -1,5 +1,5 @@
 /*
- * @autor: Gonzalo Santiago Garcia
+} * @autor: Gonzalo Santiago Garcia
  * Fecha de creación: 26 de abril del 2022
  * fecha de actualización:26 de abril del 2022
  * Descripción: en esta parte entra las variables del pojo Transporte 
