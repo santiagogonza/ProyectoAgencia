@@ -184,7 +184,7 @@ public class Principal {
 
 			case 3:
 				System.out.println("ingrese la cantidad de transporte que desea agregar:");
-				
+
 				candato = leerNumero.nextInt();
 				for (int i = 0; i < candato; i++) {
 					Transporte transport4 = new Transporte();
@@ -205,7 +205,7 @@ public class Principal {
 				break;
 
 			case 4:
-				
+
 				controlDest.mostrarDestino(listaDest);
 				Destino destino;
 				long id;
@@ -213,31 +213,34 @@ public class Principal {
 				do {
 					id = leerNumero.nextLong();
 					destino = controlDest.obtenerUnDestino(listaDest, id);
-					if(destino==null) {
+					if (destino == null) {
 						System.out.println("No hay registro");
 						System.out.println("ingresa una opcion valida");
 					}
-				}while(destino==null);
-				
+				} while (destino == null);
 
-				System.out.println("-------------------------------------------------------------------------------------------");
-				System.out.println("|               Destino            |       Ubicación                  |    Télefono       |");
-				System.out.println("-------------------------------------------------------------------------------------------");
-				
-				System.out.printf("| %31s  | %32s | %17s |", destino.getNombre(),destino.getDireccion() , destino.getTelefono() );
-				System.out.println("\n-------------------------------------------------------------------------------------------");		
-				
+				System.out.println(
+						"-------------------------------------------------------------------------------------------");
+				System.out.println(
+						"|               Destino            |       Ubicación                  |    Télefono       |");
+				System.out.println(
+						"-------------------------------------------------------------------------------------------");
+
+				System.out.printf("| %31s  | %32s | %17s |", destino.getNombre(), destino.getDireccion(),
+						destino.getTelefono());
+				System.out.println(
+						"\n-------------------------------------------------------------------------------------------");
+
 				System.out.println("eliga el Id del Transporte:");
-				
-				
+
 				id = leerNumero.nextLong();
 				Transporte transporte = controlTransp.obtenerTransporte(listaTransp, id);
 				System.out.println("--------------------------------------------------------------------");
 				System.out.println("| Id Transporte |  Nombre de Transporte  |   Precio del Transporte |");
-				System.out.printf("| %12d  | %22s | %23s |", transporte.getIdTranspor() ,transporte.getNombreTransport() , transporte.getNumAsiento() );
+				System.out.printf("| %12d  | %22s | %23s |", transporte.getIdTranspor(),
+						transporte.getNombreTransport(), transporte.getNumAsiento());
 				System.out.println("\n--------------------------------------------------------------------");
-				
-				
+
 				break;
 			case 5:
 

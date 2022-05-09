@@ -36,8 +36,10 @@ public class DestinoModel {
 	}
 
 	public void mostrarDestino(List<Destino> lista) {
-		System.out.println("--------------------------------------------------------------------------------------------------------------------------------");
-		System.out.println("|   Id     |   Destino      	           | Código Postal      |                  Dirección               |    Télefono        |");
+		System.out.println(
+				"--------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println(
+				"|   Id     |   Destino      	           | Código Postal      |                  Dirección               |    Télefono        |");
 		System.out.println(
 				"--------------------------------------------------------------------------------------------------------------------------------");
 		for (Destino destino : lista) {
