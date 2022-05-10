@@ -1,7 +1,7 @@
 /*
  * @Autor:Gonzalo Santiago García					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	   
  Fecha_de_Inicio: 25 de abril del 2022				   
- Fecha_de_actualización: 25 de abril del 2022				   
+ Fecha_de_actualización: 9 de mayo 2022				   
  Descripción: se presentan la función main 
  */
 

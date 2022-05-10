@@ -1,7 +1,7 @@
 /*
  * @Autor:Gonzalo Santiago García						   
  Fecha_de_Inicio: 25 de abril del 2022				   
- Fecha_de_actualización: 25 de abril del 2022				   
+ Fecha_de_actualización: 9 de mayo 2022				   
  Descripción: creamos los métodos para crear Transporte, obtenerTransporte, mostrarTransporte
  			  los datos que son nesesarios se presentaran en pantalla, 
  */

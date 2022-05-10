@@ -2,7 +2,7 @@
 /*
  * @Autor:Gonzalo Santiago García						   
  Fecha_de_Inicio: 25 de abril del 2022				   
- Fecha_de_actualización: 25 de abril del 2022				   
+ Fecha_de_actualización: 9 de mayo 2022				   
  Descripción: se declaran las variables que se va a utilizar dentro del programa
  */
 package agencia.miahuas.pojo;
@@ -19,6 +19,18 @@ public class Viaje {
 	public Viaje() {
 
 	}
+
+	
+	
+	public Viaje(long codigo, String destino, String salida, String regreso, int precio) {
+	this.codigo = codigo;
+	this.destino = destino;
+	this.salida = salida;
+	this.regreso = regreso;
+	this.precio = precio;
+}
+
+
 
 	public long getCodigo() {
 		return codigo;

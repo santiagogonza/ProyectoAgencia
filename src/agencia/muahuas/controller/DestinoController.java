@@ -1,7 +1,7 @@
 /*
  * @Autor:Gonzalo Santiago García						   
  Fecha_de_Inicio: 25 de abril del 2022				   
- Fecha_de_actualización: 25 de abril del 2022				   
+ Fecha_de_actualización: 9 de mayo 2022				   
  Descripción: se declaran las variables que se va a utilizar dentro del programa
  */
 package agencia.muahuas.controller;

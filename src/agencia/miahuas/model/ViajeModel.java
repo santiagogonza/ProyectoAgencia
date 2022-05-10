@@ -1,8 +1,9 @@
 /*
  * @Autor:Gonzalo Santiago García						   
  Fecha_de_Inicio: 25 de abril del 2022				   
- Fecha_de_actualización: 25 de abril del 2022				   
- Descripción: se declaran las variables que se va a utilizar dentro del programa
+ Fecha_de_actualización: 9 de mayo 2022				   
+ Descripción: en esta clase ViajeModel se crea la lista de viajes y además se crea los mŕtodos correspondientes
+  			  que se presentaran en la terminal como los datos que seran presentados en pantalla
  */
 package agencia.miahuas.model;
 
