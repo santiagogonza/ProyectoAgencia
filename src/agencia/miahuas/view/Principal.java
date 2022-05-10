@@ -138,7 +138,7 @@ public class Principal {
 			System.out.println("----------------------------------");
 			System.out.println("| AGENCIA DE VIAJES MIAHUATLÁN   |");
 			System.out.println("|  1.- Lista de lugares:         |");
-			System.out.println("|  2.- Lista de viajes:          |");
+			System.out.println("|  2.- :          |");
 			System.out.println("|  3.- Lista de transporte:      |");
 			System.out.println("|  4.- Reservación:              |");
 			System.out.println("|  5.- Salir                     |");
@@ -156,7 +156,7 @@ public class Principal {
 
 				break;
 			case 2:
-
+				controlViaj.mostrarViaje(listaViaj);
 				System.out.println("ingrese la cantidad de viajes que de desea realizar:");
 				candato = leerNumero.nextInt();
 				for (int i = 0; i < candato; i++) {
@@ -178,7 +178,7 @@ public class Principal {
 
 				System.out.println("Listas de Viajes");
 
-				controlViaj.mostrarViaje(listaViaj);
+				 controlViaj.mostrarViaje(listaViaj);
 
 				break;
 
@@ -233,7 +233,14 @@ public class Principal {
 
 				System.out.println("eliga el Id del Transporte:");
 
-				id = leerNumero.nextLong();
+				
+				do {
+					id = leerNumero.nextLong();
+					if( id <1 || id >= listaTransp.size()) {
+						System.out.println("ingrese un id valido");
+						
+					}
+				}while(id <1 || id >= listaTransp.size() );
 				Transporte transporte = controlTransp.obtenerTransporte(listaTransp, id);
 				System.out.println("--------------------------------------------------------------------");
 				System.out.println("| Id Transporte |  Nombre de Transporte  |   Precio del Transporte |");
@@ -244,7 +251,7 @@ public class Principal {
 				break;
 			case 5:
 
-				System.out.println("\t*************Fin del programa**************");
+				System.out.println("\t*************  Fin del programa   **************");
 				break;
 
 			}
