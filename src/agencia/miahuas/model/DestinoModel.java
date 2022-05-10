@@ -16,7 +16,7 @@ public class DestinoModel {
 		return lista;
 
 	}
-
+	//se crea el método obtenerUnDestino que al 
 	public Destino obtenerUnDestino(List<Destino> lista, long id) {
 		for (Destino destino : lista) {
 
