@@ -14,17 +14,20 @@ public class Transporte {
 	private long idTranspor;
 	private int numAsiento;
 	private String nombreTransport;
-   // se crea el constructor vacio
+
+	// se crea el constructor vacio
 	public Transporte() {
 
 	}
-	//se crea el constructor con párametos correspondientes de cada dato y sus tipos de datos
+
+	// se crea el constructor con párametos correspondientes de cada dato y sus
+	// tipos de datos
 	public Transporte(long idTranspor, int numAsiento, String nombreTransport) {
 		this.idTranspor = idTranspor;
 		this.numAsiento = numAsiento;
 		this.nombreTransport = nombreTransport;
 	}
-	
+
 	// se declara los métodos set y get de cada atributo de la clase Transporte
 	public long getIdTrasnpor() {
 		return idTranspor;

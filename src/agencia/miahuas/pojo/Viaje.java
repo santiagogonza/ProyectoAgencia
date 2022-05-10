@@ -20,17 +20,13 @@ public class Viaje {
 
 	}
 
-	
-	
 	public Viaje(long codigo, String destino, String salida, String regreso, int precio) {
-	this.codigo = codigo;
-	this.destino = destino;
-	this.salida = salida;
-	this.regreso = regreso;
-	this.precio = precio;
-}
-
-
+		this.codigo = codigo;
+		this.destino = destino;
+		this.salida = salida;
+		this.regreso = regreso;
+		this.precio = precio;
+	}
 
 	public long getCodigo() {
 		return codigo;

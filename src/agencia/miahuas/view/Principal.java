@@ -157,7 +157,7 @@ public class Principal {
 				break;
 			case 2:
 				System.out.println("haga su solicitud hacia al destino que desea realizar");
-				
+
 				controlViaj.mostrarViaje(listaViaj);
 				System.out.println("ingrese la cantidad de viajes que de desea realizar:\n");
 				candato = leerNumero.nextInt();
@@ -180,7 +180,7 @@ public class Principal {
 
 				System.out.println("Listas de Viajes");
 
-				 controlViaj.mostrarViaje(listaViaj);
+				controlViaj.mostrarViaje(listaViaj);
 
 				break;
 
@@ -207,11 +207,11 @@ public class Principal {
 				break;
 
 			case 4:
-
+				System.out.println("lista de lugares para que haga su reservación: \n");
 				controlDest.mostrarDestino(listaDest);
 				Destino destino;
 				long id;
-				System.out.println("eliga el Id del destino que desea viajar");
+				System.out.println("eliga el Id del destino que desea viajar: \n");
 				do {
 					id = leerNumero.nextLong();
 					destino = controlDest.obtenerUnDestino(listaDest, id);
@@ -232,17 +232,22 @@ public class Principal {
 						destino.getTelefono());
 				System.out.println(
 						"\n-------------------------------------------------------------------------------------------");
-
-				System.out.println("eliga el Id del Transporte:");
-
 				
+				
+					System.out.print("\t\n lista de transporte:\n\n ");
+			
+				
+				controlTransp.mostrarTransporte(listaTransp);
+				
+				System.out.println("Eliga el Id del Transporte:\n");
+
 				do {
 					id = leerNumero.nextLong();
-					if( id <1 || id >= listaTransp.size()) {
+					if (id < 1 || id >= listaTransp.size()) {
 						System.out.println("ingrese un id valido");
-						
+
 					}
-				}while(id <1 || id >= listaTransp.size() );
+				} while (id < 1 || id >= listaTransp.size());
 				Transporte transporte = controlTransp.obtenerTransporte(listaTransp, id);
 				System.out.println("--------------------------------------------------------------------");
 				System.out.println("| Id Transporte |  Nombre de Transporte  |   Precio del Transporte |");
@@ -250,6 +255,8 @@ public class Principal {
 						transporte.getNombreTransport(), transporte.getNumAsiento());
 				System.out.println("\n--------------------------------------------------------------------");
 
+				
+				
 				break;
 			case 5:
 

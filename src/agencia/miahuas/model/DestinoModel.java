@@ -16,11 +16,13 @@ public class DestinoModel {
 		return lista;
 
 	}
-	//se crea el método obtenerUnDestino que obtiene un id de la clase destino 
+
+	// se crea el método obtenerUnDestino que obtiene un id de la clase destino
 	public Destino obtenerUnDestino(List<Destino> lista, long id) {
 		for (Destino destino : lista) {
-			// hace la ccomparación si es igual el id que se esta igualando entonces retorna un objeto destino
-			// si no lo encuentra retorna un null 
+			// hace la ccomparación si es igual el id que se esta igualando entonces retorna
+			// un objeto destino
+			// si no lo encuentra retorna un null
 			if (destino.getIdlugar() == id) {
 				return destino;
 			}
@@ -36,7 +38,8 @@ public class DestinoModel {
 
 	}
 
-	// se crea el método mostrarDestino que muestra los atributos  de la clase y los presenta en pantalla
+	// se crea el método mostrarDestino que muestra los atributos de la clase y los
+	// presenta en pantalla
 	public void mostrarDestino(List<Destino> lista) {
 		System.out.println(
 				"--------------------------------------------------------------------------------------------------------------------------------");
